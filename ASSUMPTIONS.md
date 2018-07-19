@@ -3,9 +3,9 @@
 ## Bussiness Process
 pertama, sebelum membuat sebuah event, kita harus membuat location dan category terlebih dahulu.
 selanjutnya kita dapat membuat event.
-sebelum kita menambahkan ticket type di tiap event, langkah yang harus dilakukan adalah menambahkan data ticket type.
+sebelum kita menambahkan ticket type di tiap event, langkah yang harus dilakukan adalah menambahkan master ticket type.
 setelah itu kita dapat menentukan ticket type apa saja untuk suatu event.
-ketika event dan detail ticket type dibuat, maka customer dapat membeli beberapa ticket type dari satu event tertentu.
+ketika event dan detail ticket type berhasil dibuat, maka customer dapat membeli beberapa ticket type dari satu event tertentu.
 transaction code (transCode) akan tergenerate ketika customer membeli ticket.
 dari transCode tersebut, customer dapat melihat detail transaction dari apa yg sudah mereka beli.
 
@@ -40,7 +40,7 @@ swagger yg tersedia hanya untuk 4 endpoint berikut :
 
 > Ada kendala untuk menggunakan endpoint tersebut di swagger, yaitu tidak bisa digunakan untuk testing (execute).
 
-###### create location
+###### CREATE LOCATION
 parameter
 ```
 {
@@ -52,7 +52,7 @@ parameter
 }
 ```
 
-###### create event
+###### CREATE EVENT
 parameter
 ```
 {
@@ -65,7 +65,7 @@ parameter
 }
 ```
 
-###### event detail
+###### EVENT DETAIL
 parameter
 ```
 {
@@ -73,9 +73,10 @@ parameter
 }
 ```
 
-###### create event ticket
+###### CREATE EVENT TICKET
 parameter
-```{
+```
+{
 	"data" :
 	[
 		{
@@ -87,7 +88,7 @@ parameter
 }
 ```
 
-###### purchase ticket
+###### PURCHASE TICKET
 parameter
 ```
 {
@@ -105,7 +106,7 @@ parameter
 }
 ```
 
-###### transaction detail
+###### TRANSACTION DETAIL
 parameter
 ```
 {
