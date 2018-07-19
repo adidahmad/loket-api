@@ -1,0 +1,176 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Loket API",
+        "version": "1.0.0"
+    },
+    "basePath": "/api",
+    "paths": {
+        "/event/get_info/{id}": {
+            "get": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Display a detail of event.",
+                "description": "Return event detail.",
+                "operationId": "findEventById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "eventID",
+                    "in": "path",
+                    "description": "unique event identifier.",
+                    "required": true,
+                    "type": "integer"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "event overview."
+                    }
+                }
+            }
+        },
+        "/event/create": {
+            "post": {
+                "tags": [
+                    "Event"
+                ],
+                "summary": "Create an event.",
+                "description": "Create an event.",
+                "operationId": "createEvent",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "eventName",
+                        "in": "path",
+                        "description": "name of event.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "eventCode",
+                        "in": "path",
+                        "description": "code of event.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "eventStartDate",
+                        "in": "path",
+                        "description": "start date of event.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "eventEventDate",
+                        "in": "path",
+                        "description": "end date of event.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "locationID",
+                        "in": "path",
+                        "description": "unique location identifier.",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "categoryID",
+                        "in": "path",
+                        "description": "unique category identifier.",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "event succesfully created."
+                    }
+                }
+            }
+        },
+        "/location/create": {
+            "post": {
+                "tags": [
+                    "Location"
+                ],
+                "summary": "Create a location.",
+                "description": "Create a location.",
+                "operationId": "createLocation",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "venue",
+                        "in": "path",
+                        "description": "name of venue.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "venue address.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "description": "venue city.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "province",
+                        "in": "path",
+                        "description": "venue province.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "country",
+                        "in": "path",
+                        "description": "venue country.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "event succesfully created."
+                    }
+                }
+            }
+        },
+        "/transaction/get_info/{transCode}": {
+            "get": {
+                "tags": [
+                    "Transaction"
+                ],
+                "summary": "Display detail of transaction.",
+                "description": "Returns transaction detail.",
+                "operationId": "findTransactionByTransCode",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "transCode",
+                    "in": "path",
+                    "description": "transaction code.",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "transaction overview."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
