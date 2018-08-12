@@ -41,6 +41,7 @@ Sebenarnya saya sudah menambahkan swagger di project ini, dapat di akses melalui
 
 ###### CREATE LOCATION
 > url : api/location/create
+
 parameter
 ```
 {
@@ -54,6 +55,7 @@ parameter
 
 ###### CREATE EVENT
 > url : api/event/create
+
 parameter
 ```
 {
@@ -68,6 +70,7 @@ parameter
 
 ###### EVENT DETAIL
 > url : api/event/get_info/{id}
+
 parameter
 ```
 {
@@ -77,6 +80,7 @@ parameter
 
 ###### CREATE EVENT TICKET
 > url : api/event/ticket/create
+
 parameter
 ```
 {
@@ -93,6 +97,7 @@ parameter
 
 ###### PURCHASE TICKET
 > url : api/transaction/purchase
+
 parameter
 ```
 {
@@ -112,6 +117,7 @@ parameter
 
 ###### TRANSACTION DETAIL
 > url : api/transaction/get_info/{transCode}
+
 parameter
 ```
 {
