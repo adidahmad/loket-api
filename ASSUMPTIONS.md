@@ -30,8 +30,7 @@ Dari 5 point diatas, saya hanya menyediakan api untuk :
 
 > untuk create category, create ticket type di insert secara manual.
 
-Sebenarnya saya sudah menambahkan swagger di project ini, dapat di akses melalui `/api/documentation`:
-swagger yg tersedia hanya untuk 4 endpoint berikut :
+Sebenarnya saya sudah menambahkan swagger di project ini, dapat di akses melalui `/api/documentation`. swagger yg tersedia hanya untuk 4 endpoint berikut :
 
 - create location
 - create event
@@ -41,6 +40,7 @@ swagger yg tersedia hanya untuk 4 endpoint berikut :
 > Ada kendala untuk menggunakan endpoint tersebut di swagger, yaitu tidak bisa digunakan untuk testing (execute).
 
 ###### CREATE LOCATION
+> url : api/location/create
 parameter
 ```
 {
@@ -53,6 +53,7 @@ parameter
 ```
 
 ###### CREATE EVENT
+> url : api/event/create
 parameter
 ```
 {
@@ -66,6 +67,7 @@ parameter
 ```
 
 ###### EVENT DETAIL
+> url : api/event/get_info/{id}
 parameter
 ```
 {
@@ -74,6 +76,7 @@ parameter
 ```
 
 ###### CREATE EVENT TICKET
+> url : api/event/ticket/create
 parameter
 ```
 {
@@ -89,6 +92,7 @@ parameter
 ```
 
 ###### PURCHASE TICKET
+> url : api/transaction/purchase
 parameter
 ```
 {
@@ -107,6 +111,7 @@ parameter
 ```
 
 ###### TRANSACTION DETAIL
+> url : api/transaction/get_info/{transCode}
 parameter
 ```
 {
