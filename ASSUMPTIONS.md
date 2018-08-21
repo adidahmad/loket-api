@@ -40,27 +40,27 @@ Sebenarnya saya sudah menambahkan swagger di project ini, dapat di akses melalui
 > Ada kendala untuk menggunakan endpoint tersebut di swagger, yaitu tidak bisa digunakan untuk testing (execute).
 
 ###### CREATE LOCATION
-> url : api/location/create
+> url (POST) : api/location/create
 
 parameter
 ```
 {
-	"venue":"string",
-	"address:"string",
-	"city":"string",
-	"province":"string",
-	"country":"string"
+	"venue"		:"string",
+	"address"	:"string",
+	"city"		:"string",
+	"province"	:"string",
+	"country"	:"string"
 }
 ```
 
 ###### CREATE EVENT
-> url : api/event/create
+> url (POST) : api/event/create
 
 parameter
 ```
 {
-	"eventName"	:"string",
-	"eventCode"	:"string",
+	"eventName"		:"string",
+	"eventCode"		:"string",
 	"eventStartDate":"y-m-d h:i:s",
 	"eventEndDate"	:"y-m-d h:i:s",
 	"locationID"	:integer,
@@ -69,17 +69,10 @@ parameter
 ```
 
 ###### EVENT DETAIL
-> url : api/event/get_info/{id}
-
-parameter
-```
-{
-	"eventID" : integer
-}
-```
+> url (GET) : api/event/get_info/{eventID}
 
 ###### CREATE EVENT TICKET
-> url : api/event/ticket/create
+> url (POST) : api/event/ticket/create
 
 parameter
 ```
@@ -87,8 +80,8 @@ parameter
 	"data" :
 	[
 		{
-			"price"		:double,
-			"eventID"	:integer,
+			"price"			:double,
+			"eventID"		:integer,
 			"ticketTypeID"	:integer
 		}
 	]
@@ -96,31 +89,24 @@ parameter
 ```
 
 ###### PURCHASE TICKET
-> url : api/transaction/purchase
+> url (POST) : api/transaction/purchase
 
 parameter
 ```
 {
-	"name" 	: "string",
-	"email" : "string",
-	"phone" : "string",
-	"address" : "string",
-	"tickets" :
+	"name" 		: "string",
+	"email" 	: "string",
+	"phone" 	: "string",
+	"address" 	: "string",
+	"tickets" 	:
 	[
 		{
 			"eventTicketID"	:integer,
-			"quantity"	:integer
+			"quantity"		:integer
 		}
 	]
 }
 ```
 
 ###### TRANSACTION DETAIL
-> url : api/transaction/get_info/{transCode}
-
-parameter
-```
-{
-	"transCode" : "string"
-}
-```
+> url (GET) : api/transaction/get_info/{transCode}
